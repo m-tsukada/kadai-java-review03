@@ -42,17 +42,18 @@ public class BaseBallTeam {
     public void setDraw(int draw) {
         this.draw = draw;
     }
+
     
     // 勝率の計算メソッド
-    public double getRate(int win, int lose) {
-        double result = (double)win/(win + lose);
+    public double getRate() {
+        double result = (double)this.win/(this.win + this.lose);
         return result;
     }
     
     // 勝率を報告するメソッド
-    public void report(String name, int win, int lose, int draw) {
-        double result = getRate(win, lose);
-        System.out.println(name + " の2022年の成績は " + win + "勝 " + lose + "敗 " + draw + "分、勝率は " + result + "です。");
+    public void report() {
+        double result = getRate();
+        System.out.println(this.name + " の2022年の成績は " + this.win + "勝 " + this.lose + "敗 " + this.draw + "分、勝率は " + result + "です。");
     }
 
 }

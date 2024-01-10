@@ -14,9 +14,8 @@ public class Review03 {
                     new BaseBallTeam("中日ドラゴンズ", 66, 75, 2)
             };
         int num = 0;
-        while (num < 6) {
-            baseBallTeamList[num].report(baseBallTeamList[num].getName(), baseBallTeamList[num].getWin(), 
-                baseBallTeamList[num].getLose(), baseBallTeamList[num].getDraw());
+        while (num < baseBallTeamList.length) {
+            baseBallTeamList[num].report();
             num += 1;
         }
     }
